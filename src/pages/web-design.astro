@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import WebDesignPage from '../components/WebDesignPage';
+import Footer from '../components/Footer';
+
+const seoProps = {
+	title: "Web Design for Plumbers & Heating Engineers | PlumberSEO.co.uk",
+	description: "High-performance websites for UK plumbers and heating engineers. Fast-loading, mobile-optimised sites built to convert visitors into boiler installs and emergency call-outs. From £97/month.",
+	keywords: "plumber website design, heating engineer website, plumbing web design UK, trade website builder, boiler company website, emergency plumber website",
+	canonicalUrl: "/web-design",
+	ogType: "website"
+};
+---
+
+<Layout {...seoProps}>
+	<div class="min-h-screen">
+		<Navbar client:load currentPath="/web-design" />
+		<main>
+			<WebDesignPage />
+		</main>
+		<Footer />
+	</div>
+</Layout>
+
+<!-- Service-specific JSON-LD -->
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "Service",
+	"serviceType": "Web Design for Plumbers",
+	"provider": {
+		"@type": "ProfessionalService",
+		"name": "PlumberSEO.co.uk",
+		"url": "https://plumberseo.co.uk"
+	},
+	"areaServed": {
+		"@type": "Country",
+		"name": "United Kingdom"
+	},
+	"hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "Web Design Packages",
+		"itemListElement": [
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "The Soloist",
+					"description": "Perfect for 1-man bands wanting to look professional and win local emergency calls."
+				},
+				"price": "97",
+				"priceCurrency": "GBP",
+				"priceSpecification": {
+					"@type": "UnitPriceSpecification",
+					"price": "97",
+					"priceCurrency": "GBP",
+					"billingDuration": "P1M"
+				}
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "The Growth Engine",
+					"description": "Our most popular build. Focused on high-value boiler swaps and bathroom refits."
+				},
+				"price": "197",
+				"priceCurrency": "GBP",
+				"priceSpecification": {
+					"@type": "UnitPriceSpecification",
+					"price": "197",
+					"priceCurrency": "GBP",
+					"billingDuration": "P1M"
+				}
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "The Fleet Master",
+					"description": "Multi-location SEO and landing pages for businesses with multiple vans and postcodes."
+				},
+				"price": "497",
+				"priceCurrency": "GBP",
+				"priceSpecification": {
+					"@type": "UnitPriceSpecification",
+					"price": "497",
+					"priceCurrency": "GBP",
+					"billingDuration": "P1M"
+				}
+			}
+		]
+	}
+}
+</script>

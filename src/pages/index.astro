@@ -1,11 +1,78 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import SocialProof from '../components/SocialProof';
+import CaseStudies from '../components/CaseStudies';
+import PainPoints from '../components/PainPoints';
+import Services from '../components/Services';
+import AuthorityResources from '../components/AuthorityResources';
+import FAQ from '../components/FAQ';
+import Footer from '../components/Footer';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const seoProps = {
+	title: "PlumberSEO.co.uk - #1 SEO Agency for UK Plumbers & Heating Engineers",
+	description: "The specialist SEO agency for UK plumbers and heating engineers. Get more boiler installs, emergency call-outs and bathroom refits with our proven local SEO and Google Maps strategies. No long contracts. Trusted by 200+ UK trade businesses.",
+	keywords: "plumber SEO UK, heating engineer marketing, local SEO plumbers, Google Maps ranking plumbers, boiler install leads, emergency plumber SEO, plumbing company marketing, HVAC SEO UK",
+	canonicalUrl: "/",
+	ogType: "website"
+};
 ---
 
-<Layout>
-	<Welcome />
+<Layout {...seoProps}>
+	<div class="min-h-screen">
+		<Navbar client:load currentPath="/" />
+		<main>
+			<Hero />
+			<SocialProof />
+			<CaseStudies />
+			<PainPoints />
+			<Services />
+			<AuthorityResources />
+			<FAQ client:load />
+		</main>
+		<Footer />
+	</div>
 </Layout>
+
+<!-- Additional page-specific JSON-LD for FAQ -->
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "How long until I see more calls?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Most plumbers see an increase in Google Maps impressions within 45 days. Major organic rankings typically take 3-6 months depending on local competition."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Do you only work with one plumber per town?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Yes. Exclusivity is key. We cannot rank two plumbers in the same town at #1, so we only partner with one business per service area."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "What's the difference between you and Checkatrade?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Checkatrade owns the lead and sells it to you and your competitors. We build your OWN asset. When we're done, you own the top spot on Google and keep 100% of the profit."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Do I need a new website?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Not necessarily. We can optimize your existing site, or build you a new high-converting site if your current one is scaring customers away."
+			}
+		}
+	]
+}
+</script>

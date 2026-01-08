@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import LeadPage from '../components/LeadPage';
+import Footer from '../components/Footer';
+
+const seoProps = {
+	title: "Get Your Free SEO Audit for Plumbers | PlumberSEO.co.uk",
+	description: "Request your free, no-obligation SEO audit for your plumbing or heating business. We'll analyze your local competitors and show you exactly how to rank #1 on Google Maps in your area.",
+	keywords: "free plumber SEO audit, plumbing business analysis, local SEO review, Google Maps audit plumbers, plumber marketing consultation",
+	canonicalUrl: "/get-started",
+	ogType: "website"
+};
+---
+
+<Layout {...seoProps}>
+	<div class="min-h-screen">
+		<Navbar client:load currentPath="/get-started" />
+		<main>
+			<LeadPage client:load />
+		</main>
+		<Footer />
+	</div>
+</Layout>

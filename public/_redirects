@@ -1,0 +1,4 @@
+# Netlify redirects
+# Force HTTPS and www redirect (optional - configure in Netlify dashboard instead)
+# https://www.plumberseo.co.uk/* https://plumberseo.co.uk/:splat 301!
+
