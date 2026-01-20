@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import HeatingSEOPage from '../components/HeatingSEOPage';
+import Footer from '../components/Footer';
+
+const seoProps = {
+	title: "SEO for Heating Engineers & Boiler Specialists | PlumberSEO.co.uk",
+	description: "Specialist SEO services for UK heating engineers and boiler specialists. Dominate local search results for boiler installations, ASHP installs, and emergency heating repairs. Exclusive area rights available.",
+	keywords: "heating engineer SEO, boiler specialist marketing, HVAC SEO UK, heating company SEO, boiler installation leads, gas engineer marketing, central heating SEO",
+	canonicalUrl: "/heating-seo/",
+	ogType: "website"
+};
+---
+
+<Layout {...seoProps}>
+	<div class="min-h-screen">
+		<Navbar client:load currentPath="/heating-seo/" />
+		<main>
+			<HeatingSEOPage />
+		</main>
+		<Footer />
+	</div>
+</Layout>
+
