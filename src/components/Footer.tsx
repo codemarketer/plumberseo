@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3 md:space-y-4 text-slate-400 text-sm md:text-base">
               <li><a href="/get-started/" className="hover:text-blue-500 transition-colors">Local SEO Pack</a></li>
               <li><a href="/get-started/" className="hover:text-blue-500 transition-colors">Google Maps Domination</a></li>
-              <li><a href="/heating-seo/" className="hover:text-blue-500 transition-colors">SEO for Heating Engineers</a></li>
+              <li><a href="/seo-for-heating-engineers/" className="hover:text-blue-500 transition-colors">SEO for Heating Engineers</a></li>
               <li><a href="/web-design/" className="hover:text-blue-500 transition-colors font-semibold text-slate-300">High-Performance Web Design</a></li>
             </ul>
           </div>
